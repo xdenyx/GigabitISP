@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .alltarifs {
+        width: 1410px;
+        margin: 0 auto;
+    }
+    .container-tarif {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 16px;
+        justify-content: space-between;
+    }
+    .tarif {
+        width: 314px;
+        height: 258px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        padding: 44px;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+        margin-right: 90px;
+    }
+    .speed {
+        font-size: 26px;
+    }
+    </style>
+    <script>
+        const connectLinks = document.querySelectorAll('.connect');
+
+        connectLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                const targetPage = this.getAttribute('href');
+
+                fetch(targetPage)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('content').innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching page:', error);
+                    });
+                window.history.pushState({ page: targetPage }, null, targetPage);
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <section class="tarifs" id="tarifs">
+        <div class="alltarifs">
+            <h2>Наши акции</h2>
+            <div class="container-tarif">
+                <div class="tarif">
+                    <h3>Тариф “TV + Оптимальный”</h3>
+                    <p class="speed">100 мбит/сек + <br>ТБ 50 каналов</p>
+                    <p class="price">250 грн. на месяц</p>
+                    <a href="connect.html" class="connect">Подключить</a>
+                </div>
+                <div class="tarif">
+                    <h3>Тариф “TV + Гигабит”</h3>
+                    <p class="speed">1 гбит/сек + <br>ТБ 400 каналов</p>
+                    <p class="price">400 грн. на месяц</p>
+                    <a href="connect.html" class="connect">Подключить</a>
+                </div>
+                <div class="tarif">
+                    <h3>Тариф “TV + Скоростной”</h3>
+                    <p class="speed">300 мбит/сек + <br>ТБ 200 каналов</p>
+                    <p class="price">300 грн. на месяц</p>
+                    <a href="connect.html" class="connect">Подключить</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

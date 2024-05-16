@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: Inter;
+    font-weight: 500;
+    height: 100%;
+}
+.container {
+    width: 1411px;
+    margin: 0 auto;
+}
+.logo {
+    width: 90px;
+    height: 90px;  
+    margin-right: 31px;
+}
+.logo_name {
+    margin-right: 152px;
+    font-size: 32px;
+}
+.logo_name_a{
+    text-decoration: none;
+}
+.header {
+    background-color: rgba(236, 181, 255, 1);
+    height: 164px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25  );
+    margin-bottom: 47px;
+}
+header a {
+    color: black;
+}
+.menu {
+    display: flex;
+    list-style: none; 
+}
+.menu li a {
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu li {
+    margin-right: 52px;
+}
+.menu li a {
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s; 
+    position: relative;
+}
+
+.menu li a:hover {
+    color: #c46bff; 
+}
+
+.menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #c46bff; 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease; 
+}
+.page {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    flex: 1 1 auto;
+    margin: 0 auto;
+    width: 1410px;
+    text-align: center;
+    justify-content: center;
+}
+.menu li a:hover::after { 
+    transform: scaleX(1); 
+}
+.menu li a.active {
+    color: #c46bff; 
+}
+
+.menu li.active a::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #c46bff;
+}
+
+.nav { 
+    display: flex;
+    align-items: center;
+    padding-top: 37px;
+    padding-bottom: 37px;
+}
+.login {
+    margin-left: auto;
+}
+ul li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+.login { 
+    display: block;
+    width: 103px;
+    height: 30px;
+    color: white;
+    background: #000;
+    font-size: 20px;
+    border-radius: 12px;
+    border: none;
+    text-align: center;
+    padding-top: 4px;
+    text-decoration: none;
+    font-weight: normal;
+}
+.container-card {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1410px;
+    margin: 0 auto;
+}
+.card {
+    width: 315px;
+    height: 258px;
+    border: 1px solid #ccc;
+    margin-right: 99px;
+    padding: 44px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+}
+.card:last-child {
+    margin-right: 0px;
+}
+.allcards{
+    margin-bottom: 70px;
+}
+.connect {
+    display: flex;
+    background-color: #000000;
+    color: #fff;
+    text-decoration: none;
+    /* padding: 5px 10px; */
+    border-radius: 10px;
+    width: 314px;
+    height: 48px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+h3, .price { 
+    font-size: 20px;
+}
+.speed{
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 0;
+}
+.price {
+    color: rgb(95, 95, 95);
+    margin-bottom: 32px;
+}
+.card a:hover {
+    background-color: #858585;
+    
+}
+h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 0;
+}
+.footer {
+    background-color: rgba(237, 198, 255, 1);
+    padding-top: 35px;
+    margin-top: 70px;
+}
+.footer-container{
+    width: 1410px;
+    height: 260px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.footer-section {
+    margin-right: 173px;
+}
+.footer-section:last-child {
+    margin-right: 0;
+}
+.footer-section h3 {
+    margin-bottom: 24px;
+    margin-top: 0;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 20px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-section ul li a:hover {
+    color: #c46bff;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+.copyright {
+    text-align: center;
+    background-color: rgba(250, 218, 255, 1);
+    padding: 6px;
+}
+.icons {
+    margin-right: 18px;
+}
+

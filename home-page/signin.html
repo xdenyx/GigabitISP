@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        .form-container {
+          justify-content: center;
+          max-width: 420px;
+          background-color: #fff;
+          border-radius: 20px;
+          font-size: 20px;
+          color: #000;
+          font-weight: 500;
+          line-height: 150%;
+          width: 1410px;
+          margin: 0 auto;
+        }
+        .form-wrapper {
+          display: flex;
+          flex-direction: column;
+          padding: 0 20px 30px;
+          background-color: rgba(0, 0, 0, 0.21);
+          border-radius: 10px;
+        }
+        .form-title {
+          margin-top: 40px;
+          align-self: center;
+          font: 24px Inter;
+        }
+        .input-group {
+          display: flex;
+          flex-direction: column;
+          margin-top: 24px;
+          color: #828282;
+        }
+        .input {
+          font-family: Inter, sans-serif;
+          padding: 12px 16px;
+          border-radius: 8px;
+          border: 1px solid rgba(224, 224, 224, 1);
+          background-color: #fff;
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+          font-size: 22px;
+        }
+        .input-ssid-group {
+          margin-top: 5px;
+        }
+        .submit-btn {
+          align-self: center;
+          padding: 2px 16px;
+          margin-top: 24px;
+          background-color: #eee;
+          border-radius: 8px;
+          border: none;
+          font: 20px Inter, sans-serif;
+          cursor: pointer;
+        }
+      </style>
+</head>
+<body>
+      <section class="form-container">
+        <form class="form-wrapper">
+          <h2 class="form-title">Вход в личный кабинет</h2>
+          <div class="input-group input-ssid-group">
+            <input id="wifi-ssid" type="text" class="input" placeholder="Введите название вашего Wi-Fi" aria-label="Введите название вашего Wi-Fi" />
+          </div>
+          <div class="input-group">
+            <input id="wifi-password" type="password" class="input" placeholder="Введите пароль" aria-label="Введите пароль" />
+          </div>
+          <button type="submit" class="submit-btn">Войти</button>
+        </form>
+      </section>
+</body>
+</html>

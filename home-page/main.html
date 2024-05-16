@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const connectLinks = document.querySelectorAll('.connect');
+
+        connectLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                const targetPage = this.getAttribute('href');
+
+                fetch(targetPage)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('content').innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching page:', error);
+                    });
+                window.history.pushState({ page: targetPage }, null, targetPage); 
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <section class="rates" id="rates">
+        <div class="allcards">
+            <h2>Популярные тарифы</h2>
+            <div class="container-card">
+                <div class="card">
+                    <h3>Тариф “Оптимальный”</h3>
+                    <p class="speed">100 мбит/сек</p>
+                    <p class="price">150 грн. на месяц</p>
+                    <a href="connect.html" class="connect">Подключить</a>
+                </div>
+                <div class="card">
+                    <h3>Тариф “Скоростной”</h3>
+                    <p class="speed">300 мбит/сек</p>
+                    <p class="price">200 грн. на месяц</p>
+                    <a href="connect.html" class="connect">Подключить</a>
+                </div>
+                <div class="card">
+                    <h3>Тариф “Гигабит”</h3>
+                    <p class="speed">1 гбит/сек</p>
+                    <p class="price">350 грн. на месяц</p>
+                    <a href="connect.html" class="connect">Подключить</a>
+                </div>
+            </div>
+        </div>
+    </section>  
+</body>
+</html>
